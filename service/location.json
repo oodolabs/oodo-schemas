@@ -1,0 +1,35 @@
+{
+  "id": "http://schema.dolink.co/service/location",
+  "$schema": "/service",
+  "description": "Location Manager Service.",
+  "methods": {
+    "calibrate": {
+      "description": "Starts calibrating a room using the given device id (BLE MAC?)",
+      "params": [
+        {
+          "name": "roomId",
+          "value": { "$ref": "/model/room#/properties/id" }
+        },
+        {
+          "name": "deviceId",
+          "value": {
+            "description": "TODO This should be changed",
+            "type": "string"
+          }
+        },
+        {
+          "name": "reset",
+          "value": {
+            "description": "Whether the existing room's calibration should be reset or not",
+            "type": "boolean"
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "null"
+        }
+      }
+    }
+  }
+}

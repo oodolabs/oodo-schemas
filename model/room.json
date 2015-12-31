@@ -1,0 +1,18 @@
+{
+  "id": "http://schema.dolink.co/model/room",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Room",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "/common#/definitions/uuid" },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id"
+  ]
+}

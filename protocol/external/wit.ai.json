@@ -1,0 +1,10 @@
+{
+  "id": "http://schema.dolink.co/protocol/external.wit.ai",
+  "$schema": "/protocol",
+  "methods": {},
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/external.wit.ai#" }
+    }
+  }
+}

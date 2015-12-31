@@ -1,0 +1,61 @@
+{
+  "id": "http://schema.dolink.co/service/device-model",
+  "$schema": "/service",
+  "description": "Dobox - Device Model Service.",
+  "methods": {
+    "fetch": {
+      "description": "Retrieves a Device",
+      "params": [
+        {
+          "name": "deviceId",
+          "value": { "$ref": "/model/device#/definitions/id" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/device" }
+      }
+    },
+    "delete": {
+      "description": "Deletes a Device",
+      "params": [
+        {
+          "name": "deviceId",
+          "value": { "$ref": "/model/device#/definitions/id" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/device#/definitions/id" }
+      }
+    },
+    "addChannel": {
+      "description": "Adds a channel to a device",
+      "params": [
+        {
+          "name": "deviceId",
+          "value": { "$ref": "/model/device#/definitions/id" }
+        },
+        {
+          "name": "channel",
+          "value": { "$ref": "/model/channel" }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "null"
+        },
+        "description": "TODO: Success value?"
+      }
+    }
+  },
+  "events": {
+    "created": {
+      "value": { "$ref": "/model/device#/definitions/id" }
+    },
+    "updated": {
+      "value": { "$ref": "/model/device#/definitions/id" }
+    },
+    "deleted": {
+      "value": { "$ref": "/model/device#/definitions/id" }
+    }
+  }
+}

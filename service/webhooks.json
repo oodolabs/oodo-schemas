@@ -1,0 +1,77 @@
+{
+  "id": "http://schema.dolink.co/service/webhooks",
+  "$schema": "/service",
+  "description": "Dobox - WebHook service",
+  "methods": {
+    "add": {
+      "description": "Creates a new web hook",
+      "params": [
+        {
+          "name": "webhook",
+          "value": { "$ref": "#/definitions/webhook" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/common#/definitions/dolink-id" }
+      }
+    }
+  },
+  "events": {
+    "created": {
+      "value": { "$ref": "/common#/definitions/dolink-id" }
+    },
+    "updated": {
+      "value": { "$ref": "/common#/definitions/dolink-id" }
+    },
+    "deleted": {
+      "value": { "$ref": "/common#/definitions/dolink-id" }
+    }
+  },
+  "definitions": {
+    "webhook": {
+      "description": "Most properties will allow token replacements like {{date 'DDMMYY'}} see: http://golang.org/pkg/text/template/",
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "pattern": "^https?:\/\/"
+        },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "HEAD", "POST", "PUT", "DELETE"]
+        },
+        "headers": {
+          "type": "object",
+          "patternProperties": {
+              "^[^\\s]+$": {
+                "type": "string"
+              }
+          }
+        },
+        "entity": {
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["string", "hex"]
+            },
+            "body": {
+              "type": "string"
+            }
+          },
+          "required": ["type", "body"]
+        }
+      },
+      "required": ["url", "method"],
+      "not": {
+        "anyOf": [{
+          "properties": {
+            "method": {
+              "enum": ["GET", "HEAD"]
+            }
+          },
+          "required": ["entity"]
+        }]
+      }
+    }
+  }
+}

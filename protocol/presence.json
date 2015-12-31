@@ -1,0 +1,9 @@
+{
+  "id": "http://schema.dolink.co/protocol/presence",
+  "$schema": "/protocol",
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/common#/definitions/boolean-state" }
+    }
+  }
+}

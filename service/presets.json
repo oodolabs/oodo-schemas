@@ -1,0 +1,219 @@
+{
+  "id": "http://schema.dolink.co/service/presets",
+  "$schema": "/service",
+  "description": "This service provides methods to list, create and apply presets.",
+  "methods": {
+    "fetchScenePrototype": {
+      "description": "Fetch a prototype scene for the specified scope.",
+      "params": [
+        {
+          "name": "scope",
+          "description": "The scope used to populate the thing states.",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/scene"
+          }
+        }
+      },
+      "required": false
+    },
+    "fetchScenes": {
+      "description": "Fetch the available scenes within a given scope.",
+      "params": [
+        {
+          "name": "query",
+          "description": "The scope used to restrict the contents of the list.",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "description": "The fetched scenes",
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/scene"
+          }
+        }
+      },
+      "required": false
+    },
+    "deleteScenes": {
+      "description": "Delete the scene matching the specified query",
+      "params": [
+        {
+          "name": "query",
+          "description": "A query matching the scenes to be deleted.",
+          "value": {
+              "$ref": "#/definitions/query"
+          }
+        }
+      ],
+      "returns": {
+        "description": "The deleted scenes",
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/scene"
+          }
+        }
+      },
+      "required": false
+    },
+    "storeScene": {
+      "description": "Store the scene.",
+      "params": [
+        {
+          "name": "scene",
+          "description": "The uuid of the scene to be stored.",
+          "value": {
+            "$ref": "#/definitions/scene"
+          }
+        }
+      ],
+      "returns": {
+        "description": "The state of the scene, as saved in the configuration",
+        "value": {
+          "$ref": "#/definitions/scene"
+        }
+      },
+      "required": false
+    },
+    "applyScene": {
+      "description": "Apply the scene state to the scene things.",
+      "params": [
+        {
+          "name": "id",
+          "description": "The uuid of the scene to be applied.",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "description": "The original state of the scene.",
+        "value": {
+          "$ref": "#definitions/scene"
+        }
+      },
+      "required": false
+    },
+    "undoScene": {
+      "description": "Undo the most recent application of the scene.",
+      "params": [
+        {
+          "name": "id",
+          "description": "The uuid of the scene to be applied.",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "description": "The original state of the scene.",
+        "value": {
+          "$ref": "#definitions/scene"
+        }
+      },
+      "required": false
+    }
+  },
+  "events": {
+    "presets-applied": {
+      "value": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "query": {
+      "description": "Query parameters.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The identifier of the scene."
+        },
+        "scope": {
+          "type": "string",
+          "description": "A string of the form site, site:{site-id} or room:{room-id}."
+        },
+        "slot": {
+          "type": "number",
+          "description": "The slot number of the preset."
+        }
+      }
+    },
+    "scene": {
+      "description": "A scene describe a set of things and their corresponding states.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The identifier of the scene."
+        },
+        "scope": {
+          "type": "string",
+          "description": "A string of the form site, site:{site-id} or room:{room-id}."
+        },
+        "slot": {
+          "type": "number",
+          "description": "The slot number of the scene."
+        },
+        "label": {
+          "type": "string",
+          "description": "The label of the scene."
+        },
+        "things": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/thing-state"
+          }
+        }
+      }
+    },
+    "thing-state": {
+      "description": "A thing-state describes a thing and set of associated channel states.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The identifier of the thing."
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/channel-state"
+          }
+        }
+      }
+    },
+    "channel-state": {
+      "description": "A channel-state describes a thing and set of associated channel states.",
+      "properties": {
+        "id": {
+          "description": "The identifier of the .",
+          "type": "string"
+        },
+        "state": {
+          "description": "The preset state of the channel.",
+          "type": "object"
+        },
+        "undo": {
+          "description": "The undo state of the channel as at the last apply, if any.",
+          "type": "object"
+        }
+      }
+    }
+  }
+}

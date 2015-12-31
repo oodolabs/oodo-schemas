@@ -1,0 +1,39 @@
+{
+  "id": "http://schema.dolink.co/protocol/game-controller.xbox-360-leds",
+  "$schema": "/protocol",
+  "methods": {
+    "set": {
+      "description": "Sets the LED state",
+      "params": [
+        {
+          "name": "state",
+          "value": { "$ref": "#/events/state/value" }
+        }
+      ]
+    }
+  },
+  "events": {
+    "state": {
+      "value": {
+        "type": "string",
+        "enum": [
+          "OFF",
+          "BLINK_ALL_ALERT",
+          "FLASH_ON_1",
+          "FLASH_ON_2",
+          "FLASH_ON_3",
+          "FLASH_ON_4",
+          "ON_1",
+          "ON_2",
+          "ON_3",
+          "ON_4",
+          "ROTATING",
+          "BLINK_CURRENT_ALERT",
+          "SLOW_BLINK_CURRENT_ALERT",
+          "ALTERNATING_ALERT"
+        ]
+      },
+      "description": "_ALERT means it will return to the previously set individual light (ON_X or FLASH_ON_X)"
+    }
+  }
+}

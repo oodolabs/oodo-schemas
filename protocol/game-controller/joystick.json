@@ -1,0 +1,22 @@
+{
+  "id": "http://schema.dolink.co/protocol/game-controller.joystick",
+  "$schema": "/protocol",
+  "events": {
+    "state": {
+      "value": {
+        "properties": {
+          "x": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          },
+          "y": {
+            "type": "number",
+            "minimum": -1,
+            "maximum": 1
+          }
+        }
+      }
+    }
+  }
+}

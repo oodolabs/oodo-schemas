@@ -1,0 +1,10 @@
+{
+  "id": "http://schema.dolink.co/protocol/temperature",
+  "$schema": "/protocol",
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/common#/definitions/number-timeseries" },
+      "description": "Temperature in degrees celsius."
+    }
+  }
+}

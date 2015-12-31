@@ -1,0 +1,128 @@
+{
+  "id": "http://schema.dolink.co/service/thing-model",
+  "$schema": "/service",
+  "description": "Dobox - Thing Model Service.",
+  "methods": {
+    "create": {
+      "description": "Saves a new Thing",
+      "params": [
+        {
+          "name": "thing",
+          "value": { "$ref": "/model/thing" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/thing#/properties/id" }
+      }
+    },
+    "fetchAll": {
+      "description": "Retrieves all Things",
+      "returns": {
+        "value": {
+          "type": "array",
+          "items": { "$ref": "/model/thing" }
+        }
+      }
+    },
+    "fetch": {
+      "description": "Retrieves a Thing by id",
+      "params": [
+        {
+          "name": "id",
+          "value": { "$ref": "/model/thing#/properties/id" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/thing" }
+      }
+    },
+    "fetchByExample": {
+      "description": "Retrieves all Things that match the example object",
+      "params": [
+        {
+          "name": "example",
+          "value": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "array",
+          "items": { "$ref": "/model/thing" }
+        }
+      }
+    },
+    "fetchByDeviceId": {
+      "description": "Retrieves a Thing by device id",
+      "params": [
+        {
+          "name": "deviceId",
+          "value": { "$ref": "/model/device#/definitions/id" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/thing" }
+      }
+    },
+    "setLocation": {
+      "description": "Updates the location of a Thing",
+      "params": [
+        {
+          "name": "thingId",
+          "value": { "$ref": "/model/thing#/properties/id" }
+        },
+        {
+          "name": "location",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/thing#/properties/id" }
+      }
+    },
+    "delete": {
+      "description": "Deletes a Thing",
+      "params": [
+        {
+          "name": "thingId",
+          "value": { "$ref": "/model/thing#/properties/id" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/model/thing#/properties/id" }
+      }
+    },
+    "fetchByType": {
+      "description": "Fetch a list of things by type",
+      "params": [
+        {
+          "name": "type",
+          "value": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "array",
+          "items": { "$ref": "/model/thing" }
+        }
+      }
+    }
+  },
+  "events": {
+    "created": {
+      "value": { "$ref": "/model/thing#/properties/id" }
+    },
+    "updated": {
+      "value": { "$ref": "/model/thing#/properties/id" }
+    },
+    "deleted": {
+      "value": { "$ref": "/model/thing#/properties/id" }
+    }
+  }
+}

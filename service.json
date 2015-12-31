@@ -1,0 +1,101 @@
+{
+  "id": "http://schema.dolink.co/service",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "The descriptor for Dolink JSON-RPC-over-MQTT services",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "$schema": {
+      "enum": [
+        "http://schema.dolink.co/service",
+        "http://schema.dolink.co/protocol"
+      ]
+    },
+    "$ref": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "methods": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-zA-Z]+$": {
+          "type": "object",
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "params": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "$ref": "#/definitions/parameter" }
+            },
+            "returns": {
+              "properties": {
+                "value": { "$ref": "http://json-schema.org/draft-04/schema#" },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "required": {
+              "type": "boolean",
+              "default": "true"
+            }
+          },
+          "required": [
+            "description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "events": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z-]+$": {
+          "properties": {
+            "value": { "$ref": "http://json-schema.org/draft-04/schema#" },
+            "description": {
+              "type": "string"
+            },
+            "timeseries": {
+              "enum": ["event"]
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "type": "object",
+      "additionalProperties": { "$ref": "http://json-schema.org/draft-04/schema#" }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "parameter": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z][a-zA-Z]+$"
+        },
+        "value": { "$ref": "http://json-schema.org/draft-04/schema#" },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ]
+    }
+  }
+}

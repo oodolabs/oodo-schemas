@@ -1,0 +1,44 @@
+{
+  "id": "http://schema.dolink.co/protocol/external.holiday.by.moorescloud",
+  "$schema": "/protocol",
+  "methods": {
+    "set": {
+      "description": "Sets the state of all the lights. If you send a single light colour, it will be applied to all",
+      "params": [
+        {
+          "name": "state",
+          "value": { "$ref": "#/definitions/single-or-all" }
+        }
+      ]
+    }
+  },
+  "events": {
+    "state": {
+      "value": { "$ref": "#/definitions/single-or-all" }
+    }
+  },
+  "definitions": {
+    "single-or-all": {
+      "oneOf": [
+        { "$ref": "#/definitions/all-lights" },
+        { "$ref": "#/definitions/single-lights" }
+      ]
+    },
+    "all-lights": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/single-light" },
+      "minItems": 50,
+      "maxItems": 50
+    },
+    "single-light": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 255
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  }
+}

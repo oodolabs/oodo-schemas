@@ -1,0 +1,15 @@
+{
+  "id": "http://schema.dolink.co/protocol/motion",
+  "$schema": "/protocol",
+  "events": {
+    "state": {
+      "value": {
+        "type": "boolean",
+        "enum": [
+          true
+        ],
+        "timeseries": "event"
+      }
+    }
+  }
+}

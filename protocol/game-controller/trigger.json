@@ -1,0 +1,13 @@
+{
+  "id": "http://schema.dolink.co/protocol/game-controller.trigger",
+  "$schema": "/protocol",
+  "events": {
+    "state": {
+      "value": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    }
+  }
+}

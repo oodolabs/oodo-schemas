@@ -1,0 +1,49 @@
+{
+  "id": "http://schema.dolink.co/protocol/light",
+  "$schema": "/protocol",
+  "methods": {
+    "setLight": {
+      "description": "Send a full light state object to the device. Not all properties will be supported by all devices.",
+      "params": [
+        {
+          "name": "state",
+          "value": { "$ref": "/state/light#" }
+        }
+      ],
+      "returns": {
+        "value": { "$ref": "/state/light#" },
+        "description": "Returns the current state of the light after setting"
+      }
+    },
+    "alertLight": {
+      "description": "Switches to an alert state for a given number of seconds, before returning to the previous state IF the alert state is still active.",
+      "params": [
+        {
+          "name": "alertState",
+          "description": "The state to alert to",
+          "value": { "$ref": "/state/light#" }
+        },
+        {
+          "name": "alertState",
+          "description": "The time in milliseconds to alert for",
+          "value": {
+            "type": "number",
+            "minimum": 0,
+            "default": 1
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "boolean"
+        },
+        "description": "Indicates the light was returned to it's previous state. If this returns false, a new state was set in the meantime."
+      }
+    }
+  },
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/light#" }
+    }
+  }
+}

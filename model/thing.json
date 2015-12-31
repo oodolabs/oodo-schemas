@@ -1,0 +1,26 @@
+{
+  "id": "http://schema.dolink.co/model/thing",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Thing",
+  "description": "TODO",
+  "type": "object",
+  "properties": {
+    "id": { "$ref": "/common#/definitions/uuid" },
+    "type": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "device": {
+      "oneOf": [
+        { "$ref": "/model/device#"},
+        { "type": "null" }
+      ]
+    },
+    "location": { "$ref": "/common#/definitions/uuid" }
+  },
+  "required": [
+    "id"
+  ]
+}

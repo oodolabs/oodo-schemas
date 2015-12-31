@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://schema.dolink.co/protocol",
+  "description": "A Dolink Device protocol",
+  "allOf": [
+    { "$ref": "/service#" },
+    {
+      "properties": {
+        "methods": {
+          "properties": {
+            "set": {
+              "description": "If there is a 'set' method, it can only accept one param and must not have a return value.",
+              "properties": {
+                "params": {
+                  "minItems": 1,
+                  "maxItems": 1
+                }
+              },
+              "not": {
+                "required": ["returns"]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "events"
+      ]
+    }
+  ]
+}

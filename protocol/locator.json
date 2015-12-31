@@ -1,0 +1,35 @@
+{
+  "id": "http://schema.dolink.co/protocol/locator",
+  "$schema": "/service",
+  "events": {
+    "advertisement": {
+      "value": {
+        "description": "Emitted whenever a BLE peripheral is seen",
+        "properties": {
+          "device": { "$ref": "#/definitions/mac-address" },
+          "waypoint": { "$ref": "#/definitions/mac-address" },
+          "rssi": {
+            "type": "number",
+            "minimum": -128,
+            "maximum": 0
+          },
+          "isSphere": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "device",
+          "rssi"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "mac-address": {
+      "type": "string"
+    }
+  }
+}

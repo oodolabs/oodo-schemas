@@ -1,0 +1,40 @@
+{
+  "id": "http://schema.dolink.co/protocol/message-display",
+  "$schema": "/protocol",
+  "methods": {
+
+    "set": {
+      "description": "Display a message",
+      "params": [
+        {
+          "name": "message",
+          "value": { "$ref": "/state/message#" }
+        }
+      ]
+    },
+
+    "displayMessage": {
+      "description": "Display a message",
+      "params": [
+        {
+          "name": "message",
+          "value": { "$ref": "/state/message#" }
+        },
+        {
+          "name": "time",
+          "description": "The time to display the message in milliseconds. 0 = forever",
+          "value": {
+            "type": "number",
+            "minimum": 0,
+            "default": 5000
+          }
+        }
+      ]
+    }
+  },
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/message#" }
+    }
+  }
+}

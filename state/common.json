@@ -1,0 +1,55 @@
+{
+  "id": "http://schema.dolink.co/state/common",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Common Dolink state definitions",
+  "definitions": {
+    "number-timeseries": {
+      "title": "Time-series number",
+      "description": "Indicates that this property should be stored in the time-series database.",
+      "type": "number",
+      "timeseries": "value"
+    },
+    "percentage": {
+      "title": "Percentage",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "timeseries": "value"
+    },
+    "humidity": {
+      "title": "Relative Humidity",
+      "description": "Expressed as a percentage",
+      "$ref": "#/definitions/percentage"
+    },
+    "moisture": {
+      "title": "Moisture",
+      "description": "Expressed as a percentage",
+      "$ref": "#/definitions/percentage"
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "In degrees Celcius (°C)",
+      "type": "number",
+      "timeseries": "value"
+    },
+    "illuminance": {
+      "title": "Illuminance",
+      "description": "In lux",
+      "type": "number",
+      "minimum": 0,
+      "timeseries": "value"
+    },
+    "boolean-state": {
+      "title": "Boolean",
+      "description": "true=on, false=off",
+      "type": "boolean",
+      "timeseries": "boolean"
+    },
+    "power": {
+      "title": "Power",
+      "description": "Power in watts",
+      "type": "number",
+      "timeseries": "value"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "http://schema.dolink.co/model/channel",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Channel",
+  "description": "TODO",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "id": {
+          "description": "TODO: Should be a dolink-id, but 'location' is used in places atm.",
+          "type": "string"
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "device": { "$ref": "/model/device#" }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    { "$ref": "/model/service-announcement#" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "http://schema.dolink.co/service/test-service",
+  "$schema": "/service",
+  "description": "This is an example service definition used in documentation.",
+  "methods": {
+    "sayHello": {
+      "description": "Just says hello.",
+      "params": [
+        {
+          "name": "firstName",
+          "value": { "$ref": "#/definitions/firstName" }
+        },
+        {
+          "name": "age",
+          "description": "Age in years",
+          "value": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 135
+          }
+        },
+        {
+          "name": "isBirthday",
+          "description": "Indicates it's the user's birthday",
+          "value": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "string"
+        },
+        "description": "The hello message"
+      }
+    },
+    "sayGoodbye": {
+      "description": "Just says goodbye.",
+      "params": [
+        {
+          "name": "firstName",
+          "value": { "$ref": "#/definitions/firstName" }
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "string"
+        },
+        "description": "The goodbye message"
+      }
+    }
+  },
+  "events": {
+    "greeting": {
+      "value": {
+        "type": "string"
+      }
+    }
+  },
+  "definitions": {
+    "firstName": {
+      "type": "string",
+      "description": "Just the first name, only alpha characters!",
+      "pattern": "^[A-Za-z]+$"
+    }
+  }
+}

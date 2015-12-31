@@ -1,0 +1,33 @@
+{
+  "id": "http://schema.dolink.co/protocol/on-off",
+  "$schema": "/protocol",
+  "methods": {
+    "set": {
+      "description": "Turns the device on or off",
+      "params": [
+        {
+          "name": "state",
+          "value": { "$ref": "/state/common#/definitions/boolean-state" }
+        }
+      ]
+    },
+    "turnOn": {
+      "description": "Turns the device on"
+    },
+    "turnOff": {
+      "description": "Turns the device off"
+    },
+    "toggle": {
+      "description": "Toggles the on/off state",
+      "returns": {
+        "value": { "$ref": "/state/common#/definitions/boolean-state" },
+        "description": "The new state"
+      }
+    }
+  },
+  "events": {
+    "state": {
+      "value": { "$ref": "/state/common#/definitions/boolean-state" }
+    }
+  }
+}
