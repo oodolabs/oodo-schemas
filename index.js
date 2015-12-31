@@ -1,4 +1,4 @@
 module.exports = {
-  Tools: require('./lib/SchemaTools'),
-  schemas: require('./lib/Schemas')
+  tools: require('./lib/tools'),
+  schemas: require('./lib/schemas')
 };
