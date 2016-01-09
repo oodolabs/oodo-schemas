@@ -1,0 +1,86 @@
+{
+  "id": "http://schema.dolink.co/protocol/posair",
+  "$schema": "/protocol",
+  "methods": {
+    "print": {
+      "description": "打印",
+      "params": [
+        {
+          "name": "content",
+          "value": {
+            "type": "string",
+            "format": "base64",
+            "encoding": "GB18030"
+          }
+        }
+      ]
+    }
+  },
+  "events": {
+    "state": {
+      "value": {
+        "$ref": "#/definitions/state"
+      }
+    },
+    "data": {
+      "value": {
+        "type": "string",
+        "format": "base64",
+        "encoding": "GB18030"
+      }
+    }
+  },
+  "definitions": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "device": {
+          "$ref": "#/definitions/device"
+        },
+        "host": {
+          "$ref": "#/definitions/host"
+        }
+      }
+    },
+    "device": {
+      "type": "object",
+      "description": "打印机信息",
+      "properties": {
+        "vid": {
+          "type": "number",
+          "description": "Vendor ID"
+        },
+        "pid": {
+          "type": "number",
+          "description": "Product ID"
+        },
+        "port": {
+          "type": "string",
+          "description": "设备插入的 Bus-Ports 位置, 如: 1-1.2"
+        },
+        "interface": {
+          "type": "string",
+          "enum": ["usb", "com", "parallel"],
+          "description": "接口类型: USB, 串口, 并口"
+        },
+        "description": {
+          "type": "string",
+          "description": "设备描述信息"
+        }
+      }
+    },
+    "host": {
+      "type": "object",
+      "description": "主机接入",
+      "properties": {
+        "interface": {
+          "type": "string",
+          "enum": ["usb", "com", "parallel"]
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
