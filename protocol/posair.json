@@ -6,12 +6,8 @@
       "description": "打印",
       "params": [
         {
-          "name": "content",
-          "value": {
-            "type": "string",
-            "format": "base64",
-            "encoding": "GB18030"
-          }
+          "name": "data",
+          "value": { "$ref": "#/definitions/data" }
         }
       ]
     }
@@ -24,9 +20,7 @@
     },
     "data": {
       "value": {
-        "type": "string",
-        "format": "base64",
-        "encoding": "GB18030"
+        "$ref": "#/definitions/data"
       }
     }
   },
@@ -46,6 +40,10 @@
       "type": "object",
       "description": "打印机信息",
       "properties": {
+        "connected": {
+          "type": "boolean",
+          "description": "Whether is connected"
+        },
         "vid": {
           "type": "number",
           "description": "Vendor ID"
@@ -73,12 +71,34 @@
       "type": "object",
       "description": "主机接入",
       "properties": {
+        "connected": {
+          "type": "boolean",
+          "description": "Whether is connected"
+        },
         "interface": {
           "type": "string",
           "enum": ["usb", "com", "parallel"]
         },
         "description": {
           "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "description": "打印数据格式",
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "description": "内容协议, 比如: escpos 或者 txt"
+        },
+        "format": {
+          "type": "string",
+          "description": "内容编码格式, 比如: base64"
+        },
+        "content": {
+          "type": "string",
+          "description": "数据内容"
         }
       }
     }
