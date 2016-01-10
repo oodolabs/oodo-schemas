@@ -92,7 +92,7 @@
           "type": "string",
           "description": "内容协议, 比如: escpos 或者 txt"
         },
-        "format": {
+        "encoding": {
           "type": "string",
           "description": "内容编码格式, 比如: base64"
         },
