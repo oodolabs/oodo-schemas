@@ -91,7 +91,7 @@
       "description": "截获打印数据格式",
       "properties": {
         "id": {
-          "type": "string",
+          "type": ["number", "string"],
           "description": ""
         },
         "time": {
@@ -118,7 +118,7 @@
       "description": "命令打印数据格式",
       "properties": {
         "id": {
-          "type": "string",
+          "type": ["number", "string"],
           "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
         },
         "action": {
