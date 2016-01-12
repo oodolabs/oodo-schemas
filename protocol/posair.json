@@ -6,8 +6,10 @@
       "description": "打印",
       "params": [
         {
-          "name": "data",
-          "value": { "$ref": "#/definitions/data" }
+          "name": "document",
+          "value": {
+            "$ref": "#/definitions/document"
+          }
         }
       ]
     }
@@ -86,11 +88,46 @@
     },
     "data": {
       "type": "object",
-      "description": "打印数据格式",
+      "description": "截获打印数据格式",
       "properties": {
+        "id": {
+          "type": "string",
+          "description": ""
+        },
+        "time": {
+          "type": "number",
+          "default": 0,
+          "minimum": 0
+        },
         "protocol": {
           "type": "string",
-          "description": "内容协议, 比如: escpos 或者 txt"
+          "description": "内容协议, 比如: escpos 或者 text"
+        },
+        "encoding": {
+          "type": "string",
+          "description": "内容编码格式, 比如: base64"
+        },
+        "content": {
+          "type": "string",
+          "description": "数据内容"
+        }
+      }
+    },
+    "document": {
+      "type": "object",
+      "description": "命令打印数据格式",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
+        },
+        "action": {
+          "type": "string",
+          "enum": ["normal", "append"]
+        },
+        "protocol": {
+          "type": "string",
+          "description": "内容协议, 比如: escpos 或者 text"
         },
         "encoding": {
           "type": "string",
