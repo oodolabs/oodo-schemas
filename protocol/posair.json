@@ -34,7 +34,7 @@
           "$ref": "#/definitions/device"
         },
         "host": {
-          "$ref": "#/definitions/host"
+          "$ref": "#/definitions/device"
         }
       }
     },
@@ -66,23 +66,6 @@
         "description": {
           "type": "string",
           "description": "设备描述信息"
-        }
-      }
-    },
-    "host": {
-      "type": "object",
-      "description": "主机接入",
-      "properties": {
-        "connected": {
-          "type": "boolean",
-          "description": "Whether is connected"
-        },
-        "interface": {
-          "type": "string",
-          "enum": ["usb", "com", "parallel"]
-        },
-        "description": {
-          "type": "string"
         }
       }
     },
