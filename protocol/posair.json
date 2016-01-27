@@ -6,9 +6,9 @@
       "description": "打印",
       "params": [
         {
-          "name": "document",
+          "name": "request",
           "value": {
-            "$ref": "#/definitions/document"
+            "$ref": "#/definitions/request"
           }
         }
       ]
@@ -30,6 +30,10 @@
     "state": {
       "type": "object",
       "properties": {
+        "seq": {
+          "type": ["number", "string"],
+          "description": "打印序号"
+        },
         "device": {
           "$ref": "#/definitions/device"
         },
@@ -75,7 +79,11 @@
       "properties": {
         "id": {
           "type": ["number", "string"],
-          "description": ""
+          "description": "打印序号"
+        },
+        "seq": {
+          "type": ["number", "string"],
+          "description": "打印序号"
         },
         "time": {
           "type": "number",
@@ -96,11 +104,15 @@
         }
       }
     },
-    "document": {
+    "request": {
       "type": "object",
       "description": "命令打印数据格式",
       "properties": {
         "id": {
+          "type": ["number", "string"],
+          "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
+        },
+        "seq": {
           "type": ["number", "string"],
           "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
         },
