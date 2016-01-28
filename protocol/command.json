@@ -36,6 +36,10 @@
   "definitions": {
     "request": {
       "properties": {
+        "cwd": {
+          "description": "String Current working directory of the command.",
+          "type": "string"
+        },
         "command": {
           "description": "The command to be executed.",
           "type": "string"
