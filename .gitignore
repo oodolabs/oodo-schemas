@@ -3,3 +3,4 @@ gen
 .idea
 .build
 .dist
+npm-debug.log
