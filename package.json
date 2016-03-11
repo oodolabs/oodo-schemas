@@ -1,5 +1,5 @@
 {
-  "name": "dolink-schemas",
+  "name": "dobox-schemas",
   "version": "1.0.4",
   "description": "The schemas used for communication in and with Dolink Platform.",
   "main": "index.js",
@@ -13,28 +13,21 @@
     "type": "git",
     "url": "https://github.com/dolink/schemas.git"
   },
-  "author": [
-    "Dolink <support@dolink.co>",
-    "Dolink Blocks <support@dolink.co>"
-  ],
-  "license": {
-    "type": "Creative Commons Attribution-NoDerivatives 4.0 International License.",
-    "url": "http://creativecommons.org/licenses/by-nd/4.0/"
-  },
   "bugs": {
     "url": "https://github.com/dolink/schemas/issues"
   },
   "homepage": "https://github.com/dolink/schemas",
   "dependencies": {
     "colors": "1.1.2",
-    "flat": "^1.6.0",
+    "flat": "^2.0.0",
     "inflection": "^1.8.0",
-    "lodash": "^3.10.1",
+    "lodash": "^4.6.1",
     "logs": "^1.0.0",
     "tv4": "^1.2.7",
     "tv4-formats": "dolink/tv4-formats"
   },
   "devDependencies": {
-    "ejs": "^2.3.4"
+    "ejs": "^2.4.1"
   }
+
 }
