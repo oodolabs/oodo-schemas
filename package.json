@@ -17,6 +17,9 @@
     "url": "https://github.com/dolink/schemas/issues"
   },
   "homepage": "https://github.com/dolink/schemas",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
   "dependencies": {
     "colors": "1.1.2",
     "flat": "^2.0.0",
@@ -29,5 +32,4 @@
   "devDependencies": {
     "ejs": "^2.4.1"
   }
-
 }
