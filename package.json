@@ -1,6 +1,6 @@
 {
   "name": "dobox-schemas",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The schemas used for communication in and with Dolink Platform.",
   "main": "index.js",
   "directories": {
@@ -24,7 +24,7 @@
     "colors": "1.1.2",
     "flat": "^2.0.0",
     "inflection": "^1.8.0",
-    "lodash": "^4.6.1",
+    "lodash": "^4.8.2",
     "logs": "^1.0.0",
     "tv4": "^1.2.7",
     "tv4-formats": "dolink/tv4-formats"
