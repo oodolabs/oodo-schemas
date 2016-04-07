@@ -4,3 +4,4 @@ gen
 .build
 .dist
 npm-debug.log
+dist
