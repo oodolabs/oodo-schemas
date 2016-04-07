@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/dolink/schemas",
   "publishConfig": {
-    "registry": "http://registry.npmjs.org"
+    "registry": "http://registry.npmjs.com"
   },
   "dependencies": {
     "colors": "1.1.2",
