@@ -1,6 +1,6 @@
 {
   "name": "dobox-schemas",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The schemas used for communication in and with Dolink Platform.",
   "main": "index.js",
   "directories": {
