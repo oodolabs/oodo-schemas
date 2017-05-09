@@ -34,5 +34,5 @@ var invalid = [
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/state/message"
+  schema: "http://schema.oodo.co/state/message"
 };

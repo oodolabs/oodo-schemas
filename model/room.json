@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/model/room",
+  "id": "http://schema.oodo.co/model/room",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Room",
   "type": "object",

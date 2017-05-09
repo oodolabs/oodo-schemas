@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/room-model",
+  "id": "http://schema.oodo.co/service/room-model",
   "$schema": "/service",
   "description": "Dobox - Room Model Service.",
   "methods": {

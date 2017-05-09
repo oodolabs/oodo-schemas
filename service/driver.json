@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/driver",
+  "id": "http://schema.oodo.co/service/driver",
   "$schema": "/service",
   "description": "This service is required to be implemented by all Drivers",
   "methods": {

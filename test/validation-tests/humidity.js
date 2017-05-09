@@ -5,5 +5,5 @@ var invalid = ['hello', -1, 101, {a:1}];
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/state/common#/definitions/humidity"
+  schema: "http://schema.oodo.co/state/common#/definitions/humidity"
 };

@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/presets",
+  "id": "http://schema.oodo.co/service/presets",
   "$schema": "/service",
   "description": "This service provides methods to list, create and apply presets.",
   "methods": {

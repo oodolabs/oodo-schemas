@@ -6,7 +6,7 @@ var valid = [
     category: 'query',
     priority: 'low',
     replyTo: {
-      topic: "$driver/com.dolink.hue/service",
+      topic: "$driver/com.oodo.hue/service",
       method: "removeBaseStations"
     },
     clearAction: {
@@ -82,7 +82,7 @@ var valid = [
     clearable: false,
     image: {
       type: 'image',
-      src: "http://dolink.co/this.is.the.url.of.a.photo.from.a.camera.in.the.room.jpg"
+      src: "http://oodo.co/this.is.the.url.of.a.photo.from.a.camera.in.the.room.jpg"
     },
     clickAction: {
       type: 'link',
@@ -120,5 +120,5 @@ var invalid = [
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/state/notification"
+  schema: "http://schema.oodo.co/state/notification"
 };

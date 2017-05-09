@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://schema.dolink.co/protocol",
-  "description": "A Dolink Device protocol",
+  "id": "http://schema.oodo.co/protocol",
+  "description": "A Oodo Device protocol",
   "allOf": [
     { "$ref": "/service#" },
     {

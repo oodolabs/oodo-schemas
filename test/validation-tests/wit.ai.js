@@ -131,5 +131,5 @@ var invalid = [
   module.exports = {
     valid: valid,
     invalid: invalid,
-    schema: "http://schema.dolink.co/state/external.wit.ai"
+    schema: "http://schema.oodo.co/state/external.wit.ai"
   };

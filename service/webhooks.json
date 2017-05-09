@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/webhooks",
+  "id": "http://schema.oodo.co/service/webhooks",
   "$schema": "/service",
   "description": "Dobox - WebHook service",
   "methods": {
@@ -12,19 +12,19 @@
         }
       ],
       "returns": {
-        "value": { "$ref": "/common#/definitions/dolink-id" }
+        "value": { "$ref": "/common#/definitions/oodo-id" }
       }
     }
   },
   "events": {
     "created": {
-      "value": { "$ref": "/common#/definitions/dolink-id" }
+      "value": { "$ref": "/common#/definitions/oodo-id" }
     },
     "updated": {
-      "value": { "$ref": "/common#/definitions/dolink-id" }
+      "value": { "$ref": "/common#/definitions/oodo-id" }
     },
     "deleted": {
-      "value": { "$ref": "/common#/definitions/dolink-id" }
+      "value": { "$ref": "/common#/definitions/oodo-id" }
     }
   },
   "definitions": {

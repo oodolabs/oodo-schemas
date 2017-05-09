@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/protocol/message-display",
+  "id": "http://schema.oodo.co/protocol/message-display",
   "$schema": "/protocol",
   "methods": {
 

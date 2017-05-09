@@ -39,7 +39,7 @@ schemas.forEach(function(schema) {
       console.log('Missing Schema!'.red, result.missing.join(','));
     }
 
-  } else if (parent.id == 'http://schema.dolink.co/service' || parent.id == 'http://schema.dolink.co/protocol'){
+  } else if (parent.id == 'http://schema.oodo.co/service' || parent.id == 'http://schema.oodo.co/protocol'){
 
     if (schema.methods) {
       Object.keys(schema.methods).forEach(function(method) {
@@ -165,7 +165,7 @@ function resolveSchema(schemaUri, baseUri, urlHistory) {
 
 function getSchema(uri, baseUri) {
 
-  baseUri = baseUri || 'http://schema.dolink.co/';
+  baseUri = baseUri || 'http://schema.oodo.co/';
   var resolvedUri = tv4.resolveUrl(baseUri, uri);
   //console.log('Resolved schema uri', uri, 'with base', baseUri, 'to', resolvedUri);
   return tv4.getSchema(resolvedUri);

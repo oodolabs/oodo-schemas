@@ -1,10 +1,10 @@
 {
-  "id": "http://schema.dolink.co/common",
+  "id": "http://schema.oodo.co/common",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Common Dolink definitions",
+  "description": "Common Oodo definitions",
   "definitions": {
-    "dolink-id": {
-      "title": "Dolink identifier",
+    "oodo-id": {
+      "title": "Oodo identifier",
       "description": "Used for ids that are hashed from 'natural keys' like a MAC address",
       "type": "string",
       "pattern": "^([0-9a-f]{10}|[0-9A-F]{12})$"

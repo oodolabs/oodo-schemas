@@ -60,5 +60,5 @@ var invalid = [
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/service"
+  schema: "http://schema.oodo.co/service"
 };

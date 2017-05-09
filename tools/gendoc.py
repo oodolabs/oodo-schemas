@@ -116,7 +116,7 @@ class SchemaWriter(object):
 class ServiceSchemaWriter(SchemaWriter):
 	def __init__(self, name):
 		self.name = name
-		super(ServiceSchemaWriter, self).__init__('http://schema.dolink.co/service/' + name)
+		super(ServiceSchemaWriter, self).__init__('http://schema.oodo.co/service/' + name)
 
 	def _sphinx_ref_prefix(self):
 		return ['apireference', 'service', self.name]
@@ -158,7 +158,7 @@ class ServiceSchemaWriter(SchemaWriter):
 class ModelSchemaWriter(SchemaWriter):
 	def __init__(self, name):
 		self.name = name
-		super(ModelSchemaWriter, self).__init__('http://schema.dolink.co/model/' + name)
+		super(ModelSchemaWriter, self).__init__('http://schema.oodo.co/model/' + name)
 
 	def _sphinx_ref_prefix(self):
 		return ['apireference', 'model', self.name]
@@ -182,7 +182,7 @@ class ModelSchemaWriter(SchemaWriter):
 class ProtocolSchemaWriter(SchemaWriter):
 	def __init__(self, name):
 		self.name = name
-		super(ProtocolSchemaWriter, self).__init__('http://schema.dolink.co/protocol/' + name)
+		super(ProtocolSchemaWriter, self).__init__('http://schema.oodo.co/protocol/' + name)
 
 	def _sphinx_ref_prefix(self):
 		return ['apireference', 'protocol', self.name]
@@ -227,7 +227,7 @@ class ProtocolSchemaWriter(SchemaWriter):
 class StateSchemaWriter(SchemaWriter):
 	def __init__(self, name):
 		self.name = name
-		super(StateSchemaWriter, self).__init__('http://schema.dolink.co/state/' + name)
+		super(StateSchemaWriter, self).__init__('http://schema.oodo.co/state/' + name)
 
 	def _sphinx_ref_prefix(self):
 		return ['apireference', 'state', self.name]

@@ -1,4 +1,4 @@
-Dolink Schemas
+Oodo Schemas
 =======
 
 State schemas + Service descriptors + Protocols for Dobox.

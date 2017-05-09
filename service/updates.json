@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/updates",
+  "id": "http://schema.oodo.co/service/updates",
   "$schema": "/service",
   "description": "Monitors for any updates being run, and can provide status about updates being required.",
   "methods": {

@@ -1,5 +1,5 @@
 {
-    "id": "http://schema.dolink.co/service/scheduler",
+    "id": "http://schema.oodo.co/service/scheduler",
     "$schema": "/service",
     "description": "This service defines the interface to the scheduler application.",
     "methods": {

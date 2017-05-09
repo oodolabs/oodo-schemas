@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/model/channel",
+  "id": "http://schema.oodo.co/model/channel",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Channel",
   "description": "TODO",
@@ -8,7 +8,7 @@
     {
       "properties": {
         "id": {
-          "description": "TODO: Should be a dolink-id, but 'location' is used in places atm.",
+          "description": "TODO: Should be a oodo-id, but 'location' is used in places atm.",
           "type": "string"
         },
         "protocol": {

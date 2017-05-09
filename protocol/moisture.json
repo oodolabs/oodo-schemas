@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/protocol/moisture",
+  "id": "http://schema.oodo.co/protocol/moisture",
   "$schema": "/protocol",
   "events": {
     "state": {

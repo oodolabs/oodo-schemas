@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://json-schema.org/draft-04/schema#",
-  "description": "Core schema meta-schema (Altered by Dolink Inc.)",
+  "description": "Core schema meta-schema (Altered by Oodo Inc.)",
   "definitions": {
     "schemaArray": {
       "type": "array",
@@ -28,7 +28,7 @@
   "type": "object",
   "properties": {
     "timeseries": {
-      "description": "Added by Dolink Blocks Inc. to define which properties should be kept in a time-series DB",
+      "description": "Added by Oodo Blocks Inc. to define which properties should be kept in a time-series DB",
       "type": "string",
       "enum": ["value", "boolean", "event", "tag"]
     },

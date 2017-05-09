@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/protocol/game-controller.joystick",
+  "id": "http://schema.oodo.co/protocol/game-controller.joystick",
   "$schema": "/protocol",
   "events": {
     "state": {

@@ -1,5 +1,5 @@
 {
-    "id": "http://schema.dolink.co/model/coordinates",
+    "id": "http://schema.oodo.co/model/coordinates",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "Coordinates",
     "description": "Geographical coordinates - subset of http://dev.w3.org/geo/api/spec-source.html#coordinates_interface",

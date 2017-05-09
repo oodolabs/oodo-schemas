@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/model/device",
+  "id": "http://schema.oodo.co/model/device",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Device",
   "type": "object",
@@ -38,6 +38,6 @@
     { "$ref": "/model/service-announcement#" }
   ],
   "definitions": {
-    "id": { "$ref": "/common#/definitions/dolink-id" }
+    "id": { "$ref": "/common#/definitions/oodo-id" }
   }
 }

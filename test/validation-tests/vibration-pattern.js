@@ -18,5 +18,5 @@ var invalid = [
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/state/vibration-pattern"
+  schema: "http://schema.oodo.co/state/vibration-pattern"
 };

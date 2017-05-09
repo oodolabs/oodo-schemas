@@ -32,5 +32,5 @@ var invalid = [];
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/protocol"
+  schema: "http://schema.oodo.co/protocol"
 };

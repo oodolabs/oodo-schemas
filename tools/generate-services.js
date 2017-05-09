@@ -76,7 +76,7 @@ function resolveSchema(schemaUri, baseUri, urlHistory) {
 
 function getSchema(uri, baseUri) {
 
-  baseUri = baseUri || 'http://schema.dolink.co/';
+  baseUri = baseUri || 'http://schema.oodo.co/';
   var resolvedUri = tv4.resolveUrl(baseUri, uri);
   //console.log('Resolved schema uri', uri, 'with base', baseUri, 'to', resolvedUri);
   return tv4.getSchema(resolvedUri);

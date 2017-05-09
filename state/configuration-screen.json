@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/state/configuration-screen",
+  "id": "http://schema.oodo.co/state/configuration-screen",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Configuration Screen",
   "description": "Used by drivers and applications to display a form to the user, asking for configuration.",

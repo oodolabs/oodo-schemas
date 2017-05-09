@@ -167,5 +167,5 @@ var invalid = [];
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/state/configuration-screen"
+  schema: "http://schema.oodo.co/state/configuration-screen"
 };

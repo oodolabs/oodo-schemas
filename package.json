@@ -1,7 +1,7 @@
 {
   "name": "dobox-schemas",
   "version": "1.0.7",
-  "description": "The schemas used for communication in and with Dolink Platform.",
+  "description": "The schemas used for communication in and with Oodo Platform.",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dolink/schemas.git"
+    "url": "https://github.com/oodo/schemas.git"
   },
   "bugs": {
-    "url": "https://github.com/dolink/schemas/issues"
+    "url": "https://github.com/oodo/schemas/issues"
   },
-  "homepage": "https://github.com/dolink/schemas",
+  "homepage": "https://github.com/oodo/schemas",
   "publishConfig": {
     "registry": "http://registry.npmjs.com"
   },
@@ -27,7 +27,7 @@
     "lodash": "^4.8.2",
     "logs": "^1.0.0",
     "tv4": "^1.2.7",
-    "tv4-formats": "dolink/tv4-formats"
+    "tv4-formats": "oodo/tv4-formats"
   },
   "devDependencies": {
     "ejs": "^2.4.1"

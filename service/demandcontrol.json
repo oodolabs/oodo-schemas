@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/demandcontrol",
+  "id": "http://schema.oodo.co/service/demandcontrol",
   "$schema": "/service",
   "methods": {
     "submit": {

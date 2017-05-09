@@ -1,6 +1,6 @@
 var valid = [
   {
-    url: 'http://dolink.co',
+    url: 'http://oodo.co',
     method: 'GET',
     headers: {
       'my-important-user-id': 'abc1234'
@@ -22,7 +22,7 @@ var valid = [
 
 var invalid = [
   {
-    url: 'http://dolink.co',
+    url: 'http://oodo.co',
     method: 'GET',
     headers: {
       'my-important-user-id': 'abc1234',
@@ -38,5 +38,5 @@ var invalid = [
 module.exports = {
   valid: valid,
   invalid: invalid,
-  schema: "http://schema.dolink.co/service/webhooks#/definitions/webhook"
+  schema: "http://schema.oodo.co/service/webhooks#/definitions/webhook"
 };

@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/device-model",
+  "id": "http://schema.oodo.co/service/device-model",
   "$schema": "/service",
   "description": "Dobox - Device Model Service.",
   "methods": {

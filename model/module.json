@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/model/module",
+  "id": "http://schema.oodo.co/model/module",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Module (aka Driver)",
   "type": "object",

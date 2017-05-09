@@ -1,5 +1,5 @@
 {
-    "id": "http://schema.dolink.co/model/timezone",
+    "id": "http://schema.oodo.co/model/timezone",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "title": "TimeZone specification",
     "description": "Specification of a timezone",

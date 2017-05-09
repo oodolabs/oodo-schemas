@@ -1,7 +1,7 @@
 {
-  "id": "http://schema.dolink.co/service",
+  "id": "http://schema.oodo.co/service",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "The descriptor for Dolink JSON-RPC-over-MQTT services",
+  "description": "The descriptor for Oodo JSON-RPC-over-MQTT services",
   "type": "object",
   "properties": {
     "id": {
@@ -9,8 +9,8 @@
     },
     "$schema": {
       "enum": [
-        "http://schema.dolink.co/service",
-        "http://schema.dolink.co/protocol"
+        "http://schema.oodo.co/service",
+        "http://schema.oodo.co/protocol"
       ]
     },
     "$ref": {

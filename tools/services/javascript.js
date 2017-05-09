@@ -8,7 +8,7 @@
  */
 
 function <%= className %>() {
-  Dolink.bindService('<%= service.id %>', this, '$home/services/<%= className %>');
+  Oodo.bindService('<%= service.id %>', this, '$home/services/<%= className %>');
 }
 <%
 %><% if (service.methods) { %><%

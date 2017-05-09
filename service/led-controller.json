@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/led-controller",
+  "id": "http://schema.oodo.co/service/led-controller",
   "$schema": "/service",
   "description": "LED Controller Service.",
   "methods": {

@@ -1,5 +1,5 @@
 {
-  "id": "http://schema.dolink.co/service/test-service",
+  "id": "http://schema.oodo.co/service/test-service",
   "$schema": "/service",
   "description": "This is an example service definition used in documentation.",
   "methods": {

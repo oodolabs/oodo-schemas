@@ -1,7 +1,7 @@
 {
-  "id": "http://schema.dolink.co/state/common",
+  "id": "http://schema.oodo.co/state/common",
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "description": "Common Dolink state definitions",
+  "description": "Common Oodo state definitions",
   "definitions": {
     "number-timeseries": {
       "title": "Time-series number",
