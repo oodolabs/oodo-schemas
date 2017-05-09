@@ -87,13 +87,13 @@ var valid = [
     clickAction: {
       type: 'link',
       label: 'Open Room',
-      uri: 'dobox:room:ab251d73hdhfddf'
+      uri: 'oodo:room:ab251d73hdhfddf'
     },
     actions: [
       {
         type: 'link',
         label: 'Open Room',
-        uri: 'dobox:room:ab251d73hdhfddf',
+        uri: 'oodo:room:ab251d73hdhfddf',
         displayIcon: 'house'
       },
       {

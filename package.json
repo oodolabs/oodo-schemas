@@ -1,5 +1,5 @@
 {
-  "name": "dobox-schemas",
+  "name": "oodo-schemas",
   "version": "1.0.8",
   "description": "The schemas used for communication in and with Oodo Platform.",
   "main": "index.js",
