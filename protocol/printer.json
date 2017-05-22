@@ -18,24 +18,17 @@
         },
         "description": "Returns the added job"
       }
-    },
-    "cancelJob": {
-      "description": "Cancel a job by id",
-      "params": [
-        {
-          "name": "id",
-          "type": [
-            "number",
-            "string"
-          ]
-        }
-      ]
     }
   },
   "events": {
     "state": {
       "value": {
         "$ref": "#/definitions/state"
+      }
+    },
+    "job": {
+      "value": {
+        "$ref": "#/definitions/job"
       }
     }
   },
