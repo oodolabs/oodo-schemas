@@ -1,0 +1,81 @@
+{
+  "id": "http://schema.oodo.co/protocol/printer",
+  "$schema": "/protocol",
+  "methods": {
+    "print": {
+      "description": "打印",
+      "params": [
+        {
+          "name": "task",
+          "value": {
+            "$ref": "#/definitions/task"
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "$ref": "#/definitions/job"
+        },
+        "description": "Returns the added job"
+      }
+    },
+    "cancelJob": {
+      "description": "Cancel a job by id",
+      "params": [
+        {
+          "name": "id",
+          "type": [
+            "number",
+            "string"
+          ]
+        }
+      ]
+    }
+  },
+  "events": {
+    "state": {
+      "value": {
+        "$ref": "#/definitions/state"
+      }
+    }
+  },
+  "definitions": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "description": "The printer status"
+        },
+        "jobs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/job"
+          }
+        }
+      }
+    },
+    "job": {
+      "type": "object",
+      "description": "The job of printing",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "description": "命令打印数据格式",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
+        }
+      }
+    }
+  }
+}
