@@ -26,7 +26,7 @@
         "$ref": "#/definitions/state"
       }
     },
-    "job": {
+    "data": {
       "value": {
         "$ref": "#/definitions/job"
       }
@@ -50,10 +50,10 @@
     },
     "job": {
       "type": "object",
-      "description": "The job of printing",
+      "description": "The print job",
       "properties": {
         "id": {
-          "type": "string"
+          "type": ["number", "string"]
         },
         "status": {
           "type": "string"
