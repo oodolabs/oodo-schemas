@@ -1,6 +1,6 @@
 {
   "name": "oodo-schemas",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "The schemas used for communication in and with Oodo Platform.",
   "main": "index.js",
   "directories": {
