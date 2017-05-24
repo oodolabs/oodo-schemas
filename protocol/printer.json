@@ -60,6 +60,12 @@
       "type": "object",
       "description": "The print job",
       "properties": {
+        "req": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
         "id": {
           "type": [
             "number",
