@@ -79,11 +79,18 @@
     },
     "task": {
       "type": "object",
-      "description": "命令打印数据格式",
+      "description": "The printing task",
       "properties": {
+        "req": {
+          "type": [
+            "number",
+            "string"
+          ],
+          "description": "The sequence of print task"
+        },
         "url": {
           "type": "string",
-          "description": "打印序号. 追加打印时, 序号需与打印事件中的序号一致"
+          "description": "The url of file to print"
         }
       }
     }
