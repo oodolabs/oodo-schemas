@@ -60,7 +60,7 @@
       "type": "object",
       "description": "The print job",
       "properties": {
-        "req": {
+        "seq": {
           "type": [
             "number",
             "string"
@@ -81,7 +81,7 @@
       "type": "object",
       "description": "The printing task",
       "properties": {
-        "req": {
+        "seq": {
           "type": [
             "number",
             "string"
