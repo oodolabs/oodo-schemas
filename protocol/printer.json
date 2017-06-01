@@ -3,7 +3,7 @@
   "$schema": "/protocol",
   "methods": {
     "print": {
-      "description": "打印",
+      "description": "Print a document",
       "params": [
         {
           "name": "task",
@@ -18,6 +18,15 @@
         },
         "description": "Returns the added job"
       }
+    },
+    "cancel": {
+      "description": "Cancel a printing or pending job by job id",
+      "params": [
+        {
+          "name": "jobId",
+          "type": "number"
+        }
+      ]
     }
   },
   "events": {
@@ -91,6 +100,10 @@
         "url": {
           "type": "string",
           "description": "The url of file to print"
+        },
+        "copies": {
+          "type": "number",
+          "description": "The number of copies"
         }
       }
     }
