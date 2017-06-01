@@ -45,9 +45,26 @@
     "state": {
       "type": "object",
       "properties": {
+        "name": {
+          "type": "string"
+        },
+        "isDefault": {
+          "type": "boolean"
+        },
         "status": {
           "type": "string",
           "description": "The printer status"
+        },
+        "options": {
+          "type": "object",
+          "patternProperties": {
+            ".+": {
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          }
         },
         "jobs": {
           "type": "array",
@@ -83,6 +100,36 @@
         },
         "status": {
           "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "printerName": {
+          "type": "string"
+        },
+        "user": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "number"
+        },
+        "size": {
+          "type": "number"
+        },
+        "creationTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "processingTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "completedTime": {
+          "type": "string",
+          "format": "date-time"
         }
       }
     },
@@ -101,9 +148,19 @@
           "type": "string",
           "description": "The url of file to print"
         },
+        "filename": {
+          "type": "string",
+          "description": "The custom file name"
+        },
         "options": {
           "type": "object",
-          "description": "The options transfer to print"
+          "description": "The options transfer to print",
+          "properties": {
+            "copies": {
+              "type": "number",
+              "description": "The number of copies to print"
+            }
+          }
         }
       }
     }
