@@ -101,9 +101,9 @@
           "type": "string",
           "description": "The url of file to print"
         },
-        "copies": {
-          "type": "number",
-          "description": "The number of copies"
+        "options": {
+          "type": "object",
+          "description": "The options transfer to print"
         }
       }
     }
