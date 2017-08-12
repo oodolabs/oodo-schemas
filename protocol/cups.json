@@ -15,7 +15,7 @@
       "params": [
         {
           "name": "uri",
-          "type": "number"
+          "type": "string"
         },
         {
           "name": "settings",
@@ -35,11 +35,24 @@
       "params": [
         {
           "name": "id",
-          "value": {
-            "type": "string"
-          }
+          "type": "string"
         }
       ]
+    },
+    "findDrivers": {
+      "description": "Find drivers by slugs",
+      "params": [
+        {
+          "name": "slugs",
+          "type": ["string", "array"]
+        }
+      ],
+      "returns": {
+        "value": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      }
     }
   },
   "events": {
