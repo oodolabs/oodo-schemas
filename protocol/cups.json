@@ -1,0 +1,116 @@
+{
+  "id": "http://schema.oodo.co/protocol/cups",
+  "$schema": "/protocol",
+  "methods": {
+    "discover": {
+      "description": "Discover printers",
+      "returns": {
+        "value": {
+          "$ref": "#/definitions/printer-discover-result"
+        }
+      }
+    },
+    "add": {
+      "description": "Add a printer",
+      "params": [
+        {
+          "name": "uri",
+          "type": "number"
+        },
+        {
+          "name": "settings",
+          "value": {
+            "$ref": "#/definitions/printer-add-settings"
+          }
+        }
+      ],
+      "returns": {
+        "value": {
+          "$ref": "#/definitions/printer-add-result"
+        }
+      }
+    },
+    "remove": {
+      "description": "Remove a printer",
+      "params": [
+        {
+          "name": "id",
+          "value": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  },
+  "events": {
+  },
+  "definitions": {
+    "printer-discover-result": {
+      "properties": {
+        "network": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/printer-discover-item"
+          }
+        },
+        "direct": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/printer-discover-item"
+          }
+        }
+      }
+    },
+    "printer-discover-item": {
+      "properties": {
+        "model": {
+          "type": "string"
+        },
+        "uri": {
+          "type": "string"
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        }
+      }
+    },
+    "printer-add-settings": {
+      "properties": {
+        "uri": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "driver": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "defaultMedia": {
+          "type": "string"
+        },
+        "shared": {
+          "type": "string"
+        }
+      }
+    },
+    "printer-add-result": {
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

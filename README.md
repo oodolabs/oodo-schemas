@@ -1,7 +1,7 @@
 Oodo Schemas
 =======
 
-State schemas + Service descriptors + Protocols for Dobox.
+State schemas + Service descriptors + Protocols for Oodobot.
 
 It is only currently tested with [tv4](https://www.npmjs.org/package/tv4) (see: test/validateEverything.js)
 
