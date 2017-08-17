@@ -35,7 +35,8 @@
       "params": [
         {
           "name": "id",
-          "type": "string"
+          "type": "string",
+          "description": "The name or uri to "
         }
       ]
     },
@@ -59,14 +60,9 @@
   },
   "definitions": {
     "printer-discover-result": {
-      "properties": {
-        "network": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/printer-discover-item"
-          }
-        },
-        "direct": {
+      "type": "object",
+      "patternProperties": {
+        ".+": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/printer-discover-item"
@@ -114,7 +110,7 @@
           "type": "string"
         },
         "shared": {
-          "type": "string"
+          "type": "boolean"
         }
       }
     },
