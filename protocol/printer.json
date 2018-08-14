@@ -32,7 +32,7 @@
       "description": "Force fetch current state",
       "value": {
         "$ref": "#/definitions/state"
-      },
+      }
     }
   },
   "events": {
