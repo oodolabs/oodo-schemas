@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oodo/schemas.git"
+    "url": "https://github.com/oodolabs/schemas.git"
   },
   "bugs": {
-    "url": "https://github.com/oodo/schemas/issues"
+    "url": "https://github.com/oodolabs/schemas/issues"
   },
-  "homepage": "https://github.com/oodo/schemas",
+  "homepage": "https://github.com/oodolabs/schemas",
   "dependencies": {
     "colors": "1.3.1",
     "flat": "^4.1.0",
