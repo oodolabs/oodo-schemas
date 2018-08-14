@@ -61,7 +61,8 @@
             ".+": {
               "type": [
                 "number",
-                "string"
+                "string",
+                "array"
               ]
             }
           }
@@ -71,22 +72,23 @@
           "items": {
             "$ref": "#/definitions/job"
           }
-        }
-      },
-      "extra": {
-        "type": "object",
-        "properties": {
-          "timestamp": {
-            "type": "number"
-          },
-          "status": {
-            "type": "object",
-            "patternProperties": {
-              ".+": {
-                "type": [
-                  "number",
-                  "string"
-                ]
+        },
+        "extra": {
+          "type": "object",
+          "properties": {
+            "timestamp": {
+              "type": "number"
+            },
+            "status": {
+              "type": "object",
+              "patternProperties": {
+                ".+": {
+                  "type": [
+                    "number",
+                    "string",
+                    "object"
+                  ]
+                }
               }
             }
           }
