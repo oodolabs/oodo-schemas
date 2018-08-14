@@ -27,6 +27,12 @@
           "type": "number"
         }
       ]
+    },
+    "tickle": {
+      "description": "Force fetch current state",
+      "value": {
+        "$ref": "#/definitions/state"
+      },
     }
   },
   "events": {
@@ -74,20 +80,36 @@
           }
         },
         "extra": {
+          "$ref": "#/definitions/extra"
+        }
+      }
+    },
+    "extra": {
+      "type": "object",
+      "properties": {
+        "timestamp": {
+          "type": "number"
+        },
+        "status": {
           "type": "object",
           "properties": {
-            "timestamp": {
+            "inklevel": {
               "type": "number"
             },
-            "status": {
+            "drumleft": {
+              "type": "number"
+            },
+            "state": {
               "type": "object",
-              "patternProperties": {
-                ".+": {
-                  "type": [
-                    "number",
-                    "string",
-                    "object"
-                  ]
+              "properties": {
+                "reasons": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "display": {
+                  "type": "string"
                 }
               }
             }
