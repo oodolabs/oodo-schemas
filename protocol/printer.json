@@ -72,6 +72,25 @@
             "$ref": "#/definitions/job"
           }
         }
+      },
+      "extra": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "number"
+          },
+          "status": {
+            "type": "object",
+            "patternProperties": {
+              ".+": {
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            }
+          }
+        }
       }
     },
     "data": {
